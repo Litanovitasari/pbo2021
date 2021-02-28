@@ -1,31 +1,29 @@
 <?php
-
-include ('Mahasiswa.php');
-
-$lita = new Mahasiswa ();
-$devi = new Mahasiswa ();
-$siauling = new Mahasiswa ()
-
-$lita = new Mahasiswa ();
-$lita->nim ='H1101191058';
-$lita->nama = 'Lita Novitasari';
-$lita->tanggal_lahir = '2001-11-09';
-$lita->jenis_kelamin = 'Wanita';
+    require_once("Mahasiswa.php");
+    require_once("MahasiswaBaru.php");
 
 
-$devi = new Mahasiswa ();
-$devi->nim = 'H1101191057';
-$devi->nama = 'Devi Indah';
-$devi->tanggal_lahir = '2001-01-01';
-$devi->jenis_kelamin = 'Wanita';
-
-
-$siauling = new Mahasiswa ()
-$siauling->nim = 'H1101191024';
-$siauling->nama = 'Siauling';
-$siauling->tanggal_lahir = '2001-12-12';
-$siauling->jenis_kelamin = 'Wanita'
-
-$lita->tampilkanAngkatan();
+    $lita = new Mahasiswa("H1101191058", "Lita Novitasari", "2001-11-09", "Wanita");
+    $vidita = new MahasiswaBaru("H1101011044", "Vidita Reka", "2001-11-04", "Wanita", 1101);
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <?php echo "<p>Hello World</p>"; ?>
+    
+    <?php
+        $lita->tampilkanAngkatan();
+        echo "<br>";
+        $vidita->tampilkanAngkatan();
+        echo "<br>";
+        echo "<br>";
+        $lita->tampilkanUmur();
+        echo "<br>";
+        $vidita->tampilkanUmur();
+    ?>
+</body>
+</html>
