@@ -4,7 +4,7 @@
 
 
     $lita = new Mahasiswa("H1101191058", "Lita Novitasari", "2001-11-09", "Wanita");
-    $vidita = new MahasiswaBaru("H1101011044", "Vidita Reka", "2001-11-04", "Wanita", 1101);
+    $vidita = new MahasiswaBaru("H1101191044", "Vidita Reka", "2001-11-04", "Wanita", 1101);
 
 ?>
 
