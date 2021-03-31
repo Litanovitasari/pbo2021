@@ -1,4 +1,5 @@
 <?php
+    namespace application\backend;
     require_once("User.php");
 
     class Mahasiswa extends User{
@@ -44,6 +45,23 @@
         public function getJenisKelamin()
         {
             return $this->jenis_kelamin;
+        }
+
+        public function setNim($nim)
+        {
+            $this->nim = $nim;
+        }
+        public function setNama($nama)
+        {
+            $this->nama = $nama;
+        }
+        public function setTanggalLahir($tanggal_lahir)
+        {
+            $this->tanggal_lahir = $tanggal_lahir;
+        }
+        public function setJenisKelamin($jenis_kelamin)
+        {
+            $this->jenis_kelamin = $jenis_kelamin;
         }
     }
 ?>

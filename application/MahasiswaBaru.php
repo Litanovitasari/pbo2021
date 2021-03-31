@@ -1,4 +1,5 @@
 <?php 
+    namespace application\backend;
     require_once("Mahasiswa.php");
 
     class MahasiswaBaru extends Mahasiswa
@@ -36,5 +37,28 @@
         {
             return $this->no_registrasi;
         }
+
+        public function setNim($nim)
+        {
+            $this->nim = $nim;
+        }
+        public function setNama($nama)
+        {
+            $this->nama = $nama;
+        }
+        public function setTanggalLahir($tanggal_lahir)
+        {
+            $this->tanggal_lahir = $tanggal_lahir;
+        }
+        public function setJenisKelamin($jenis_kelamin)
+        {
+            $this->jenis_kelamin = $jenis_kelamin;
+        }
+        public function setNoRegistrasi($no_registrasi)
+        {
+        public function setNoRegistrasi($no_registrasi)
+            $this->no_registrasi = $no_registrasi;
+        }
     }
+
 ?>

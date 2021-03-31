@@ -1,6 +1,7 @@
 <?php
-    require_once("Mahasiswa.php");
-    require_once("MahasiswaBaru.php");
+    require_once("initialize.php");
+    use application\backend\Mahasiswa;
+    use application\backend\MahasiswaBaru;
 
 
     $lita = new Mahasiswa("H1101191058", "Lita Novitasari", "2001-11-09", "Wanita");

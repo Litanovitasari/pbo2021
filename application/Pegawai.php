@@ -1,4 +1,5 @@
 <?php
+    namespace application\backend;
     require_once("User.php");
 
     class Pegawai extends User
@@ -16,7 +17,10 @@
         }
 
         
-    
+        public function tampilkanGaji()
+        {
+            echo "Jumlah gaji : $this->gaji_pokok";
+        }
 
         public function getNama()
         {
@@ -33,6 +37,23 @@
         public function getNoHp()
         {
             return $this->no_hp;
+        }
+        
+        public function setNama($nama)
+        {
+            $this->nama = $nama;
+        }
+        public function setNip($nip)
+        {
+            $this->nip = $nip;
+        }
+        public function setGajiPokok($gaji_pokok)
+        {
+            $this->gaji_pokok = $gaji_pokok;
+        }
+        public function setNoHp($no_hp)
+        {
+            $this->no_hp = $no_hp;
         }
         
     }

@@ -1,5 +1,7 @@
 <?php
+    namespace application\backend;
     require_once("Pegawai.php");
+
 
     class Dosen extends Pegawai
     {
@@ -16,10 +18,10 @@
         }
 
         public function mengajar(){
-
+            echo $this->nama . " sedang mengajar<br>";
         }
         public function meneliti(){
-
+            echo $this->nama . " sedang meneliti<br>";
         }
         public function getNama()
         {
@@ -45,6 +47,34 @@
         {
             return $this->jabatan_akademis;
         }
+
+        public function setNama($nama)
+        {
+            $this->nama = $nama;
+        }
+        public function setNip($nip)
+        {
+            $this->nip = $nip;
+        }
+        public function setGajiPokok($gaji_pokok)
+        {
+            $this->gaji_pokok = $gaji_pokok;
+        }
+        public function setNoHp($no_hp)
+        {
+            $this->no_hp = $no_hp;
+        }
+        public function setNidn($nidn)
+        {
+            $this->nidn = $nidn;
+        }
+        public function setJabatanAkademis($jabatan_akademis)
+        {
+            $this->jabatan_akademis = $jabatan_akademis;
+        }
     
     }
+
+    namespace application\frontend;
+
 ?>

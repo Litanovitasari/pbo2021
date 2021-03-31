@@ -1,4 +1,5 @@
 <?php
+    namespace application\backend;
     class User
     {
         protected $username;
@@ -22,5 +23,13 @@
             return $this->password;
         }
 
+        public function setUsername($username)
+        {
+            $this->username = $username;
+        }
+        public function setPassword($password)
+        {
+            $this->password = $password;
+        }
     }
 ?>
