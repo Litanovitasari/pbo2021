@@ -1,7 +1,5 @@
 <?php
-    namespace application\backend;
-    require_once("Pegawai.php");
-
+    namespace App;
 
     class Dosen extends Pegawai
     {

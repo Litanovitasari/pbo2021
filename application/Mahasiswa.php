@@ -1,12 +1,15 @@
 <?php
-    namespace application\backend;
-    require_once("User.php");
+    
+    namespace App;
 
     class Mahasiswa extends User{
-        protected $nim;
-        protected $nama;
-        protected $tanggal_lahir;
-        protected $jenis_kelamin;
+        public $nim;
+        public $nama;
+        public $tanggal_lahir;
+        public $jenis_kelamin;
+        const AKTIF = 1;
+        const NON_AKTIF = 0;
+        public static $status=self::AKTIF; 
 
         function __construct($nim, $nama, $tgl, $jk){
             $this->nim = $nim;
@@ -30,38 +33,26 @@
             echo $this->nama;
         }
 
-        public function getNim()
+        public static  function bergerak()
         {
-            return $this->nim;
-        }
-        public function getNama()
-        {
-            return $this->nama;
-        }
-        public function getTanggalLahir()
-        {
-            return $this->tanggal_lahir;
-        }
-        public function getJenisKelamin()
-        {
-            return $this->jenis_kelamin;
+            echo "agen solusi, bukan agen perubahan . <br/>";
         }
 
-        public function setNim($nim)
+        public static function hitungSks($sks, $bobot)
         {
-            $this->nim = $nim;
+
+           $total_sks = $sks * $bobot;
+           echo " Bobot nilai anda = " .$bobot. "<br>";
+           echo " Jumlah sks dengan nilai bobot  ".$bobot." = " .$sks. " SKS<br>";
+           echo " Jumlah  = ";
+           return $total_sks;
+           
         }
-        public function setNama($nama)
+
+        final public function tuntaskan()
         {
-            $this->nama = $nama;
-        }
-        public function setTanggalLahir($tanggal_lahir)
-        {
-            $this->tanggal_lahir = $tanggal_lahir;
-        }
-        public function setJenisKelamin($jenis_kelamin)
-        {
-            $this->jenis_kelamin = $jenis_kelamin;
+            self::bergerak();
+            echo "memperbaiki menjadi lebih baik";
         }
     }
 ?>
